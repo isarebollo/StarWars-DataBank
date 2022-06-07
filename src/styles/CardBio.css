@@ -1,0 +1,8 @@
+.row {
+  border: 10px;
+  border-color: black;
+  width: 800px;
+  height: 600px;
+
+  margin-left:250px;
+}

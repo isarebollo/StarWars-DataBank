@@ -1,15 +1,19 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.css";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+import "../../styles/home.css";
+import CardBio from "../component/Section/CardBio.jsx";
+
+import CharacterSection from "../component/Section/CharacterSection.jsx";
+import PlanetsSection from "../component/Section/PlanetsSection.jsx";
+import VehiclesSection from "../component/Section/VehiclesSection.jsx";
+
+export const Home = () => {
+  return (
+    <>
+      <CharacterSection />
+      <PlanetsSection />
+      <VehiclesSection />
+      
+    </>
+  );
+};
