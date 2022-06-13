@@ -1,56 +1,42 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
-      // characters: [],
-      // planets: [],
-      // vehicles: [],
-
-      demo: [
+      characters: [],
+      characterProperties: {},
+      favorites: [
         {
-          title: "FIRST",
-          background: "white",
-          initial: "white",
+          uid: "1",
+          name: "Luke Skywalker",
         },
         {
-          title: "SECOND",
-          background: "white",
-          initial: "white",
+          uid: "2",
+          name: "C-3PO",
+        },
+        {
+          uid: "3",
+          name: "R2-D2",
         },
       ],
+      
     },
     actions: {
-      // setcharacters: (characters) => {
-      //   setStore({ characters: characters });
-      // },
-      // setPlanets: (planets) => {
-      //   setStore({ planets: planets });
-      // },
-      // setVehicles: (vehicles) => {
-      //   setStore({ vehicles: vehicles });
-      // },
-      // Use getActions to call a function within a fuction
-      exampleFunction: () => {
-        getActions().changeColor(0, "green");
+      setcharacters: (characters) => {
+        setStore({ characters: characters });
       },
-      loadSomeData: () => {
-        /**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+      getCharacter: (uid) => {
+        for (let i = 0; i < characters.length; i++) {
+          if (characters[i].uid === uid) {
+            return characters[i];
+          }
+        }
       },
-      changeColor: (index, color) => {
-        //get the store
-        const store = getStore();
-
-        //we have to loop the entire demo array to look for the respective index
-        //and change its color
-        const demo = store.demo.map((elm, i) => {
-          if (i === index) elm.background = color;
-          return elm;
-        });
-
-        //reset the global store
-        setStore({ demo: demo });
+      setCharacterProperties: (characterProperties) => {
+        setStore({ characterProperties });
       },
+      
+      listarFavorites:()=>{
+        return favorites
+      }
     },
   };
 };

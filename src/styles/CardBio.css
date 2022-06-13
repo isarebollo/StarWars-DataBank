@@ -5,4 +5,18 @@
   height: 600px;
 
   margin-left:250px;
+  margin-top: 80px;
 }
+#Properties{
+  margin-bottom: 200px;
+  display: flex;
+
+  color:blueviolet;
+ 
+}
+
+.description{
+
+  margin-left: 50px;
+}
+

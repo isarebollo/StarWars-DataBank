@@ -1,11 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import "../../../styles/CardBio.css";
+import { Context } from "../../store/appContext.js";
 
 const CardBio = () => {
+  const {store}=useContext(Context);
+
+
   return (
     <>
-     
-      <div className="container " >
+      <div className="container ">
         <div className="row text-center ">
           <div className="col-6">
             <img
@@ -16,13 +19,35 @@ const CardBio = () => {
           </div>
           <div className="col-6">
             <div className="card-body">
-              <h5 className="card-title"> Title</h5>
+              <h2 className="card-title"> {store.characterProperties.name}</h2>
               <p className="card-text">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
               </p>
             </div>
+          </div>
+          <div className="card-text" id="Properties" >
+           <div className="description">
+             <h4>Name </h4>
+             <h6>{store.characterProperties.name}</h6>
+           </div>
+           <div className="description">
+             <h4>Gender</h4>
+             <h6>{store.characterProperties.gender}</h6>
+           </div>
+           <div className="description">
+             <h4>Birth Year</h4>
+             <h6>{store.characterProperties.birth_year}</h6>
+           </div>
+           <div className="description">
+             <h4>Eye Color</h4>
+             <h6>{store.characterProperties.eye_color}</h6>
+           </div>
+           <div className="description">
+             <h4>Hair Color</h4>
+             <h6>{store.characterProperties.hair_color}</h6>
+           </div>
           </div>
         </div>
       </div>

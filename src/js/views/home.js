@@ -10,9 +10,9 @@ import VehiclesSection from "../component/Section/VehiclesSection.jsx";
 export const Home = () => {
   return (
     <>
-      <CharacterSection />
+      {/* <CharacterSection />
       <PlanetsSection />
-      <VehiclesSection />
+      <VehiclesSection /> */}
       
     </>
   );
