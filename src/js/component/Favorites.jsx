@@ -3,32 +3,41 @@ import { Context } from "../store/appContext";
 
 const Favorites = () => {
   const { store, actions } = useContext(Context);
-
-  let listarFav = () => {
-
-    
-  };
-
-  let eliminarFav = () => {};
-
+  useEffect
+  
   return (
     <>
-      <div className="dropdown">
+      <div className="btn-group">
         <button
-          className="btn btn-danger dropdown-toggle"
+          className="btn btn-info dropdown-toggle"
           type="button"
-          id="dropdownMenuButton1"
+          id="dropdownMenuClickableInside"
           data-bs-toggle="dropdown"
+          data-bs-auto-close="outside"
           aria-expanded="false"
+          onClick={()=>{
+            actions.listarFavorites()
+
+          }}
         >
-          Dropdown button
+          FAVORITES
         </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li>
-            <a className="dropdown-item" href="#">
-              NAME
-            </a>
-          </li>
+        <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+          {store.favorites.map((favorite, index) => {
+            return (
+              <>
+                <li key={index}>
+                  <a className="dropdown-item" href="#">
+                    {favorite.name}
+                    <button
+                      onClick={() => actions.deleteFavorites(favorite.name)}
+                      className="  btn-outline-warning fa fa-trash"
+                    ></button>
+                  </a>
+                </li>
+              </>
+            );
+          })}
         </ul>
       </div>
     </>

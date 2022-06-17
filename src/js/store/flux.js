@@ -1,26 +1,21 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      //personajes
       characters: [],
       characterProperties: {},
-      favorites: [
-        {
-          uid: "1",
-          name: "Luke Skywalker",
-        },
-        {
-          uid: "2",
-          name: "C-3PO",
-        },
-        {
-          uid: "3",
-          name: "R2-D2",
-        },
-      ],
-      
+      //planetas
+      planets: [],
+      planetsProperties: {},
+      //vehiculos
+      vehicles: [],
+      vehicleProperties: {},
+      //favoritos
+      favorites: [],
     },
     actions: {
-      setcharacters: (characters) => {
+      //personajes........................................................
+      setCharacters: (characters) => {
         setStore({ characters: characters });
       },
       getCharacter: (uid) => {
@@ -33,10 +28,55 @@ const getState = ({ getStore, getActions, setStore }) => {
       setCharacterProperties: (characterProperties) => {
         setStore({ characterProperties });
       },
-      
-      listarFavorites:()=>{
-        return favorites
-      }
+      //planetas..........................................................................
+      setPlanets: (planets) => {
+        setStore({ planets: planets });
+      },
+      getPlanet: (uid) => {
+        for (let i = 0; i < planets.length; i++) {
+          if (planets[i].uid === uid) {
+            return planets[i];
+          }
+        }
+      },
+      setPlanetProperties: (planetsProperties) => {
+        setStore({ planetsProperties });
+      },
+
+      //vehiculos.............................................................................
+      setVehicles: (vehicles) => {
+        setStore({ vehicles: vehicles });
+      },
+      getVechicle: (uid) => {
+        for (let i = 0; i < vehicles.length; i++) {
+          if (vehicles[i].uid === uid) {
+            return vehicles[i];
+          }
+        }
+      },
+      setVehicleProperties: (vehicleProperties) => {
+        setStore({ vehicleProperties });
+      },
+      //NO TOCAR CODIGO.................................................
+
+      listarFavorites: () => {
+        const store = getStore();
+        return store.favorites;
+      },
+
+      saveFavorite: (name) => {
+        const store = getStore();
+        const newFavorite = {};
+        newFavorite.name = name;
+        const auxFavorites = [...store.favorites, newFavorite]; //faltaba el actualizar el renderizado.
+
+        setStore({ favorites: auxFavorites });
+      },
+      deleteFavorites: (name) => {
+        const store = getStore();
+        const data = store.favorites.filter((item) => item.name !== name);
+        setStore({ ...store, favorites: data });
+      },
     },
   };
 };

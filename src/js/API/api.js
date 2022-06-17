@@ -22,9 +22,22 @@ const getCharacterUid = (uid) => {
 const getPlanets = () => {
   return Get(`https://www.swapi.tech/api/planets`);
 };
+const getPlanetUid = (uid) => {
+  return Get(`https://www.swapi.tech/api/planets/${uid}`);
+};
 const getVehicles = () => {
   return Get(`https://www.swapi.tech/api/vehicles`);
 };
+const getVehiclesUid = (uid) => {
+  return Get(`https://www.swapi.tech/api/vehicles/${uid}`);
+};
 
-
-export default { Get, getCharacters, getPlanets, getVehicles, getCharacterUid };
+export default {
+  Get,
+  getCharacters,
+  getCharacterUid,
+  getPlanets,
+  getPlanetUid,
+  getVehicles,
+  getVehiclesUid,
+};

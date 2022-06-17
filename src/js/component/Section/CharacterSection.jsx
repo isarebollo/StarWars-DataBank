@@ -5,11 +5,10 @@ import api from "../../API/api.js";
 import { Context } from "../../store/appContext.js";
 
 const CharacterSection = () => {
-  // const [characters, setcharacters] = useState([]);
   const { store, actions } = useContext(Context);
   useEffect(() => {
     api.getCharacters().then((data) => {
-      actions.setcharacters(data.results);
+      actions.setCharacters(data.results);
     });
   }, []);
 
@@ -17,7 +16,7 @@ const CharacterSection = () => {
 
     return (
       <>
-      <h1> Cargando....</h1>
+      <h1> Cargando Characters....</h1>
       </>
     )
   }

@@ -23,6 +23,12 @@ const injectContext = (PassedComponent) => {
 
 		useEffect(() => {
 			/**
+			 * 
+			 * state.actions.loadsomedata();
+			 * }[])
+			 * 
+			 * 
+			 * 
 			 * EDIT THIS!
 			 * This function is the equivalent to "window.onLoad", it only runs once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here. Do not use setState() to save data in the
