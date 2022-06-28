@@ -17,15 +17,15 @@ const CardCharacters = (props) => {
   return (
     <>
       <div className="container ">
-        <div className="card">
+        <div className="card text-center">
         <img
-            src="https://c4.staticflickr.com/8/7481/27348202211_641e6dafe6.jpg"
+            src={`https://starwars-visualguide.com/assets/img/characters/${props.uid}.jpg`}
             className="img-thumbnail"
             alt="..."
           ></img>
           <div className="card-body">
             <h5 className="card-title">
-              {props.uid}-{properties.name}
+              {properties.name}
             </h5>
 
             <p className="card-text">

@@ -12,20 +12,19 @@ const PlanetsSection = () => {
     });
   }, []);
 
-  if (!store.planets || store.planets.length ===0){
-
+  if (!store.planets || store.planets.length === 0) {
     return (
       <>
-      <h1> Cargando Planets....</h1>
+        <h1 id="titleCargando"> Cargando Planets...</h1>
       </>
-    )
+    );
   }
 
   return (
     <>
       <div className="container">
+        <h2 id="titleGeneral"> PLANETS</h2>
         <div className="scrollmenu">
-          <h2> PLANETS</h2>
           <div className="container d-flex">
             {store.planets.map((planet, index) => {
               return (

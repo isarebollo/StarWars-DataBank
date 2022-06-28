@@ -9,7 +9,7 @@ const Favorites = () => {
     <>
       <div className="btn-group">
         <button
-          className="btn btn-info dropdown-toggle"
+          className="btn btn-outline-warning dropdown-toggle"
           type="button"
           id="dropdownMenuClickableInside"
           data-bs-toggle="dropdown"
@@ -22,7 +22,7 @@ const Favorites = () => {
         >
           FAVORITES
         </button>
-        <ul className="dropdown-menu" aria-labelledby="dropdownMenuClickableInside">
+        <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuClickableInside">
           {store.favorites.map((favorite, index) => {
             return (
               <>

@@ -1,0 +1,16 @@
+.navbar {
+  background-color: black;
+}
+
+.img-thumbnail-1 {
+  width: 120px;
+  margin-left: 20PX;
+}
+
+#buttonFav{
+
+    margin-right: 100px;
+}
+#textNavbar{
+    color: rgb(255, 234, 0);
+}

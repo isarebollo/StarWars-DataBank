@@ -12,26 +12,23 @@ const VehiclesSection = () => {
     });
   }, []);
 
-  if (!store.vehicles || store.vehicles.length ===0){
-
+  if (!store.vehicles || store.vehicles.length === 0) {
     return (
       <>
-      <h1> Cargando Vechicles....</h1>
+        <h1 id="titleCargando"> Cargando Vechicles...</h1>
       </>
-    )
+    );
   }
-
-
   return (
     <>
       <div className="container">
+        <h2 id="titleGeneral"> VEHICLES</h2>
         <div className="scrollmenu">
-          <h2> VEHICLES</h2>
           <div className="container d-flex">
-            {store.vehicles.map((vehicles,index) => {
+            {store.vehicles.map((vehicles, index) => {
               return (
-                <div key={index} >
-                  <CardVehicles uid={vehicles.uid}/>
+                <div key={index}>
+                  <CardVehicles uid={vehicles.uid} />
                 </div>
               );
             })}

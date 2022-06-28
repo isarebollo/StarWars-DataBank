@@ -12,20 +12,19 @@ const CharacterSection = () => {
     });
   }, []);
 
-  if (!store.characters || store.characters.length ===0){
-
+  if (!store.characters || store.characters.length === 0) {
     return (
       <>
-      <h1> Cargando Characters....</h1>
+        <h1 id="titleCargando"> Cargando Characters...</h1>
       </>
-    )
+    );
   }
 
   return (
     <>
       <div className="container">
+        <h2 id="titleGeneral">CHARACTERS</h2>
         <div className="scrollmenu">
-          <h2> CHARACTERS</h2>
           <div className="container d-flex">
             {store.characters.map((character, index) => {
               return (

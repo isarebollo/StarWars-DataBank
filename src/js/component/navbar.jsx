@@ -1,27 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Favorites from "./Favorites.jsx";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
   return (
     <>
-      <div className="container">
-        <nav className="navbar navbar-light bg-light mb-3">
-          <Link to="/">
-            <span className="navbar-brand mb-0 h1">
-              <img
-                src="https://i.pinimg.com/originals/06/b2/c4/06b2c4e587960d952004be90c96a3170.jpg"
-                className="img-thumbnail"
-                alt="..."
-                width="100"
-              ></img>
-            </span>
-          </Link>
-          <div className="ml-auto">
-           <Favorites/>
-          </div>
-        </nav>
-      </div>
+      <nav className="navbar navbar-light ">
+        <Link to="/">
+          <span className="navbar-brand mb-0 h1">
+            <img
+              src="https://graffica.info/wp-content/uploads/2016/08/logo-actual-star-wars.jpg"
+              className="img-thumbnail-1"
+              alt="..."
+            ></img>
+          </span>
+        </Link>
+        <div id="textNavbar">
+         <h3 > Hace mucho tiempo en una galaxia muy, muy lejana...</h3> 
+        </div>
+
+        <div id="buttonFav" className="ml-auto">
+          <Favorites />
+        </div>
+      </nav>
     </>
   );
 };

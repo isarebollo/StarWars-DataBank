@@ -8,11 +8,11 @@ const InfoPlanet = () => {
 
   return (
     <>
-      <div className="container ">
+      <div className="container backGround ">
         <div className="row text-center ">
           <div className="col-6">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"
+              src="https://www.lafinestradigital.com/wp-content/uploads/2011/09/starwars-planetes.jpg"
               className="img-thumbnail"
               alt="..."
             ></img>

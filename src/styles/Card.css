@@ -1,5 +1,6 @@
 .card {
   width: 18rem;
+ 
 }
 
 
@@ -22,5 +23,23 @@ div.scrollmenu a:hover {
 }
 
 h2{
-  color:blue;
+  color:black;
+  text-align: center;
+  font-family: 'Quantico', sans-serif;
+  font-size: 50px;
+}
+
+#titleGeneral{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: yellow;
+  text-shadow: rgb(0, 0, 0) 4px 4px 6px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#titleCargando{
+
+  color: yellow;
+  text-shadow: rgb(0, 0, 0) 4px 4px 6px;
 }

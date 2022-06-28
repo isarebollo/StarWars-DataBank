@@ -12,7 +12,7 @@ const InfoVehicle = () => {
         <div className="row text-center ">
           <div className="col-6">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png"
+              src="https://defanafan.com/wp-content/webpc-passthru.php?src=https://defanafan.com/wp-content/uploads/2021/06/coleccion-naves-y-vehiculos-star-wars.jpg&nocache=1"
               className="img-thumbnail"
               alt="..."
             ></img>

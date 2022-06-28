@@ -17,23 +17,22 @@ const CardVehicles = (props) => {
   return (
     <>
       <div className="container ">
-        <div className="card">
+        <div className="card text-center">
           <img
-            src="https://cdn.autobild.es/sites/navi.axelspringer.es/public/styles/480/public/media/image/2015/12/492533-halcon-milenario.jpg?itok=w980sfit"
+            src={`https://starwars-visualguide.com/assets/img/vehicles/${props.uid}.jpg`}
             className="img-thumbnail"
             alt="..."
           ></img>
           <div className="card-body">
-            <h5 className="card-title">{props.uid}-{properties.name}</h5>
+            <h5 className="card-title">{properties.name}</h5>
 
             <p className="card-text">
-            manufacturer: {properties.manufacturer}
+              manufacturer: {properties.manufacturer}
               <br />
-            model: {properties.model}
-              
+              model: {properties.model}
             </p>
             <div className="d-grid gap-2 d-md-block ">
-            <button
+              <button
                 onClick={() => {
                   actions.setVehicleProperties(properties);
                 }}
@@ -43,9 +42,13 @@ const CardVehicles = (props) => {
                 <Link to="/vehicle"> Info</Link>
               </button>
 
-              <button onClick={() => {
+              <button
+                onClick={() => {
                   actions.saveFavorite(properties.name);
-                }} type="button" className="btn btn-outline-warning ms-5">
+                }}
+                type="button"
+                className="btn btn-outline-warning ms-5"
+              >
                 <i className="fa fa-heart"></i>
               </button>
             </div>

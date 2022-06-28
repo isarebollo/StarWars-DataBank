@@ -17,15 +17,15 @@ const CardPlanets = (props) => {
   return (
     <>
       <div className="container ">
-        <div className="card">
+        <div className="card text-center">
           <img
-            src="https://upload.wikimedia.org/wikipedia/ca/7/7f/Tatooine.jpg"
+            src={`https://starwars-visualguide.com/assets/img/planets/${props.uid}.jpg`}
             className="img-thumbnail"
             alt="..."
           ></img>
           <div className="card-body">
             <h5 className="card-title">
-              {props.uid}-{properties.name}
+              {properties.name}
             </h5>
 
             <p className="card-text">

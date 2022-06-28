@@ -1,7 +1,6 @@
 import React from "react";
 
 import "../../styles/home.css";
-import InfoCharacter from "../component/Section/InfoCharacter.jsx";
 
 import CharacterSection from "../component/Section/CharacterSection.jsx";
 import PlanetsSection from "../component/Section/PlanetsSection.jsx";
