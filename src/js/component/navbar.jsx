@@ -20,7 +20,7 @@ export const Navbar = () => {
          <h3 > Hace mucho tiempo en una galaxia muy, muy lejana...</h3> 
         </div>
 
-        <div id="buttonFav" className="ml-auto">
+        <div id="buttonFav" className=" badge ml-auto">
           <Favorites />
         </div>
       </nav>

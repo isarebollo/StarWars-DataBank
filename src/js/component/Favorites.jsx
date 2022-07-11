@@ -3,11 +3,11 @@ import { Context } from "../store/appContext";
 
 const Favorites = () => {
   const { store, actions } = useContext(Context);
-  useEffect
-  
+  useEffect;
+
   return (
     <>
-      <div className="btn-group">
+      <div className="btn-group ">
         <button
           className="btn btn-outline-warning dropdown-toggle"
           type="button"
@@ -15,14 +15,16 @@ const Favorites = () => {
           data-bs-toggle="dropdown"
           data-bs-auto-close="outside"
           aria-expanded="false"
-          onClick={()=>{
-            actions.listarFavorites()
-
+          onClick={() => {
+            actions.listarFavorites();
           }}
         >
-          FAVORITES
+          FAVORITES <span className="badge">{actions.numFavorites()}</span>
         </button>
-        <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuClickableInside">
+        <ul
+          className="dropdown-menu dropdown-menu-dark"
+          aria-labelledby="dropdownMenuClickableInside"
+        >
           {store.favorites.map((favorite, index) => {
             return (
               <>

@@ -77,6 +77,10 @@ const getState = ({ getStore, getActions, setStore }) => {
         const data = store.favorites.filter((item) => item.name !== name);
         setStore({ ...store, favorites: data });
       },
+      numFavorites: () => {
+        const store = getStore();
+        return store.favorites.length;
+      },
     },
   };
 };
